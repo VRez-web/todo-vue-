@@ -17,7 +17,7 @@
           {{ note.title }}
           <span :class="priorityClass(note.priority)">{{ note.priority }}</span>
         </p>
-        <p style="cursor: pointer" @click="removeNote(index)">x</p>
+        <p style="cursor: pointer" @click="removeNote(index)" class="close">x</p>
       </div>
       <div class="note-body">
         <p>{{ note.descr }}</p>
@@ -149,6 +149,12 @@ export default {
     span {
       display: block;
       margin: 10px 0 0px 0;
+    }
+
+    .close{
+      order: -1;
+      width: 100%;
+      text-align: right;
     }
   }
 }
